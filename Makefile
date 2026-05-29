@@ -605,7 +605,7 @@ ifeq ($(WIN_PLAT),y)
 export BUILD_HOSTNAME := $(COMPUTERNAME)
 export BUILD_USERNAME := $(USERNAME)
 else
-export BUILD_HOSTNAME := $(shell hostname -s)
+export BUILD_HOSTNAME := $(shell hostname)
 export BUILD_USERNAME := $(shell id -un)
 endif
 
