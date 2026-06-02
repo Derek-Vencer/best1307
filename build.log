@@ -1,0 +1,114 @@
+MAKE START: 2026-05-28 16:34:42.870577900
+mkdir -p /c/Project/best1307/out/best1307
+make -C /c/Project/best1307/out/best1307 KBUILD_SRC=/c/Project/best1307 \
+	-f /c/Project/best1307/Makefile 
+----------common.mk in flash---------------------
+FLASH_REMAP: 0
+NEW_IMAGE_FLASH_OFFSET: 0xF0000
+OTA_CODE_OFFSET: 0x20000
+-------------------------------
+-------------------------------
+REVISION_INFO: 59079a4-dirty:best1307
+-------------------------------
+make -f ../../scripts/build.mk obj=platform 
+make -f ../../scripts/build.mk obj=services/multimedia 
+make -f ../../scripts/build.mk obj=utils 
+make -f ../../scripts/build.mk obj=platform/main 
+make -f ../../scripts/build.mk obj=platform/hal 
+make -f ../../scripts/build.mk obj=utils/intersyshci 
+make -f ../../scripts/build.mk obj=bthost/bthost_v1 
+make -f ../../scripts/build.mk obj=utils/hsm 
+make -f ../../scripts/build.mk obj=apps 
+make -f ../../scripts/build.mk obj=services 
+  ( /usr/bin/printf 'create utils/built-in.a\n addmod \n addlib utils/libutils.a\nsave\nend' | arm-none-eabi-ar -M )
+make -f ../../scripts/build.mk obj=rtos 
+make -f ../../scripts/build.mk obj=utils/rom_utils 
+make -f ../../scripts/build.mk obj=services/multimedia/audio/process/anc/cfg 
+make -f ../../scripts/build.mk obj=bthost/bthost_v1/adapter 
+make -f ../../scripts/build.mk obj=rtos/rtx5 
+make -f ../../scripts/build.mk obj=services/multimedia/audio/process/filters/cfg 
+make -f ../../scripts/build.mk obj=services/audio_manager 
+make -f ../../scripts/build.mk obj=services/multimedia/audio/process/resample/coef 
+make -f ../../scripts/build.mk obj=bthost/bthost_v1/adapter/test 
+make -f ../../scripts/build.mk obj=services/capsensor/capsensor_algorithm 
+make -f ../../scripts/build.mk obj=utils/encrypt 
+make -f ../../scripts/build.mk obj=services/ux 
+make -f ../../scripts/build.mk obj=services/ux/common/config 
+make -f ../../scripts/build.mk obj=config 
+make -f ../../scripts/build.mk obj=services/ux/common/ibrt/app_ibrt 
+make -f ../../scripts/build.mk obj=utils/boot_struct 
+make -f ../../scripts/build.mk obj=bthost/bthost_v1/porting 
+make -f ../../scripts/build.mk obj=bthost/bthost_v1/rom 
+make -f ../../scripts/build.mk obj=bthost/bthost_v1/service 
+make -f ../../scripts/build.mk obj=apps/app_spp 
+make -f ../../scripts/build.mk obj=apps/audio_dump 
+make -f ../../scripts/build.mk obj=apps/audio_test 
+make -f ../../scripts/build.mk obj=apps/audioplayers 
+make -f ../../scripts/build.mk obj=bthost/bthost_v1/service/ble_app_new 
+make -f ../../scripts/build.mk obj=apps/battery 
+make -f ../../scripts/build.mk obj=apps/bt_sync 
+make -f ../../scripts/build.mk obj=bthost/bthost_v1/service/bt_app 
+make -f ../../scripts/build.mk obj=rtos/rtx5/GCC 
+make -f ../../scripts/build.mk obj=apps/cmd 
+make -f ../../scripts/build.mk obj=rtos/rtx5/rtx_config 
+make -f ../../scripts/build.mk obj=bthost/bthost_v1/service/common 
+make -f ../../scripts/build.mk obj=apps/common 
+make -f ../../scripts/build.mk obj=apps/common_ui 
+make -f ../../scripts/build.mk obj=apps/communication 
+make -f ../../scripts/build.mk obj=apps/earbuds 
+make -f ../../scripts/build.mk obj=apps/factory 
+make -f ../../scripts/build.mk obj=apps/key 
+make -f ../../scripts/build.mk obj=apps/main 
+make -f ../../scripts/build.mk obj=apps/mic 
+make -f ../../scripts/build.mk obj=apps/nv_section 
+make -f ../../scripts/build.mk obj=apps/pwl 
+make -f ../../scripts/build.mk obj=apps/main/../capsensor 
+make -f ../../scripts/build.mk obj=bthost/bthost_v1/service/bt_app/src/a2dp_codecs 
+make -f ../../scripts/build.mk obj=bthost/bthost_v1/service/bt_app/src/audio_policy/original_v2 
+make -f ../../scripts/build.mk obj=apps/audioplayers/a2dp_decoder 
+make -f ../../scripts/build.mk obj=apps/nv_section/aud_section 
+make -f ../../scripts/build.mk obj=apps/audioplayers/audio_trigger/version1 
+make -f ../../scripts/build.mk obj=apps/nv_section/customparam_section 
+make -f ../../scripts/build.mk obj=apps/nv_section/factory_section 
+make -f ../../scripts/build.mk obj=apps/nv_section/log_section 
+make -f ../../scripts/build.mk obj=apps/nv_section/userdata_section 
+make -f ../../scripts/build.mk obj=platform/hal/best1307 
+  arm-none-eabi-gcc -DBTHOST_VERSION=1 -DIBRT_UI -DCPU_PC_DUMP -DCPU_PC_DUMP_PC -DCOMMON_IRQ_ENTRY -DDATA_MASS_MARK_HAL -DDATA_MASS_MARK_IRQ -DDATA_MASS_MARK_ISPI -DDATA_MASS_MARK_SLEEP -DDATA_MASS_MARK_FLASH -DDATA_MASS_MARK_OS -DDATA_MASS_MARK_WDT -DDATA_MASS_MARK_BT_PROFILE -DDATA_MASS_MARK_CODEC -DDATA_MASS_MARK_ANC -DDATA_MASS_MARK_ENABLE -I../../services/data_mass_mark -I../../platform/cmsis/inc -I../../services/audioflinger -I../../platform/hal -DCHARGER_PLUGINOUT_RESET=0 -DBTM_MAX_LINK_NUMS=3 -DBT_DEVICE_NUM=2 -DA2DP_DECODER_VER=2 -DAUDIO_TRIGGER_VER=1 -DAUDIO_OUTPUT_DC_AUTO_CALIB -DCODEC_DAC_DC_NV_DATA -D__SW_TRIG__ -DBESBT_STACK_SIZE=1024*3 -DAF_STACK_SIZE=1024*3 -DAPP_THREAD_STACK_SIZE=1024*3 -DINTERSYS_STACK_SIZE=1024 -DFAST_XRAM_SECTION_SIZE=0x20 -DCHIP_BEST1307 -DRTOS -DKERNEL_RTX5 -I../../include/rtos/rtx5/ -D__RTX_CPU_STATISTICS__=1 -DOS_DYNAMIC_MEM_SIZE=0x5000 -DDEBUG -U__INT32_TYPE__ -D__INT32_TYPE__=int -U__UINT32_TYPE__ -DROM_UTILS_ON -DAAC_IN_ROM -DCVSD_IN_ROM -DLC3_IN_ROM_V2 -DBT_HFP_SUPPORT -DBT_A2DP_SUPPORT -DBT_AVRCP_SUPPORT -DBT_SPP_SUPPORT -DINTERSYS_DEBUG=1 -D__2M_PACK__ -D_SCO_BTPCM_CHANNEL_ -DBT_USE_COHEAP_ALLOC -DBT_HOST_REJECT_UNEXCEPT_SCO_PACKET -DA2DP_PROMPT_PLAY_ONLY_AVRCP_PLAY_RECEIVED -DBT_PAUSE_A2DP -DBT_PAUSE_A2DP_WHEN_CALL_EXIST -DGET_BT_CHECKER_STATE -DBT_DONT_PLAY_MUTE_WHEN_A2DP_STUCK_PATCH -DSPP_SERVICE_NUM=5 -DIS_BES_OTA_USE_CUSTOM_RFCOMM_UUID -DUSE_PAGE_SCAN_REPETITION_MODE_R1 -D__A2DP_PLAYER_USE_BT_TRIGGER__ -DSBC_SELECT_CHANNEL_SUPPORT -DHFP_1_6_ENABLE -DSPEECH_CODEC_FIXED_SAMPLE_RATE=16000 -DLEA_CALL_FIX_ADC_SAMPLE_RATE -DA2DP_AAC_ON -D__ACC_FRAGMENT_COMPATIBLE__ -DFDKAAC_VERSION=2 -DIS_USE_NEW_LC3_CODEC -DADVANCE_FILL_ENABLED -DPCM_FAST_MODE -DCVSD_BYPASS -DSCO_DMA_SNAPSHOT -DBT_CLK_UNIT_IN_HSLOT -DMULTI_DMA_TC -DSUPPORT_ME_MEDIATOR -DROM_UTILS_VER=2 -DSCO_OPTIMIZE_FOR_RAM -DBTH_IN_ROM -DIS_BES_BATTERY_MANAGER_ENABLED -DSUPPORT_BATTERY_REPORT -DSUPPORT_SIRI -DTWS_PROMPT_SYNC -DPROMPT_SELF_MANAGEMENT -DBT_DONT_PLAY_MUTE_WHEN_A2DP_STUCK_PATCH -DIBRT -DIBRT_BLOCKED -DIBRT_NOT_USE -D__A2DP_AUDIO_SYNC_FIX_DIFF_NOPID__ -DTWS_SYSTEM_ENABLED -DIBRT_RIGHT_MASTER -DBES_AUD -DIBRT_V2_MULTIPOINT -DPOWER_ON_ENTER_TWS_PAIRING_ENABLED -DBT_SEC_CON_BASED_ON_COD_LE_AUD -DBLE_ADV_RPA_ENABLED -DBLE_ADV_REGENERATE_NEW_RPA_DURATION=15*60 -DPOWER_ON_OPEN_BOX_ENABLED -DIGNORE_POWER_ON_KEY_DURING_BOOT_UP -DBLE_HOST_SUPPORT -DAPPEARANCE_VALUE=0 -DIS_BLE_CUSTOM_IF_ENABLED -DBLE_ADV_NOT_START_DEFAULT -DCFG_APP_DATAPATH_SERVER -D__IAG_BLE_INCLUDE__ -DBLE_STACK_PORTING_CHANGES -DBLE_CONNECTION_MAX=2 -DBLE_AUDIO_ENABLED=0 -DTWS_SYNC_NVRECORD_BLE_DEVICE_INFO_ENABLED -DMASTER_SEND_ENCRYPT_REQUEST_ENABLED -D__BLE_TX_USE_BT_TX_QUEUE__ -DBES_BLE_ACTIVITY_MAX=11 -DBES_BLE_ADV_DATA_MAX=31 -DUSE_MS_AS_BLE_ADV_INTERVAL_UNIT -D__FACTORY_MODE_SUPPORT__ -DNEW_NV_RECORD_ENABLED -I../../apps/nv_section/userdata_section -DMEDIA_PLAYER_SUPPORT -DTOTA_GENERAL_ENABLE -DAPP_KEY_ENABLE -DAPP_BATTERY_ENABLE -DMAX_TX_CREDIT=3 -DAI_CMD_TRANSPORT_BUFF_FIFO_SIZE=1024 -DBT_DIP_SUPPORT -DAUDIO_RMS_MONITOR_ENABLE -DBT_ADDR_OUTPUT_PRINT_NUM=6 -DIS_BLE_RX_HANDLER_THREAD_ENABLED -DOTA_USE_DIFF -DOTA_ENABLE -DOTA_CODE_OFFSET=0x20000 -DFIRMWARE_REV -DNEW_IMAGE_FLASH_OFFSET=0xF0000 -DBES_OTA -DIBRT_OTA -DAPP_TWS_CTRL_BUFFER_MAX_LEN=672 -DAAC_MEMPOOL_SIZE=32*1024-370 -DFLASH_SUSPEND -DMULTIPOINT_DUAL_SLAVE -DSPEECH_TX_AEC2FLOAT -DSPEECH_ROM -DBECO -DSPEECH_TX_AEC_CODEC_REF -DSPEECH_RX_NS2FLOAT -DSPEECH_RX_EQ -DSPEECH_ROM_PATCH_10_P_0 -DSPEECH_PROCESS_FRAME_MS=15 -DSPEECH_SCO_FRAME_MS=15 -DCALL_BYPASS_SLAVE_TX_PROCESS -DSPEECH_CODEC_CAPTURE_CHANNEL_NUM=1 -DAEC_OUT_BUF_CHAN_NUM=1 -D__WATCHER_DOG_RESET__ -DOTA_BIN_COMPRESSED -DAUDIO_OUTPUT_VOLUME_DEFAULT=16 -DAUDIO_BASS_ENHANCER -DLARGE_RAM -DNO_OVERLAY -DCALIB_SLOW_TIMER -DINT_LOCK_EXCEPTION -DTRACE_MAXIMUM_LOG_LEN=120 -D__BT_SYNC__ -DCAPSENSOR_ENABLE -DCHIP_CAPSENSOR_VER=5 -DCAPSENSOR_SPP_SERVER -DCAP_CHNL_BONDING_WITH_GPIO -DFLASH_SIZE=0x100000 -DSIMULTANEOUS_AWAKEN -I../../config/best1307 -I../../config/_default_cfg_src_ -I../../include -DUNALIGNED_ACCESS -Werror -mthumb -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard --specs=nano.specs -DUNIFY_HEAP_ENABLED -DUSE_BASIC_THREADS -DAPP_UI_THREAD_SIZE=2048 -DAAC_REDUCE_SIZE -DTRACE_CODE_IN_RAM -DTRACE_CP_CPU_OUTPUT -fno-common -fmessage-length=0 -Wall -fno-exceptions -ffunction-sections -fdata-sections -fomit-frame-pointer -fsigned-char -fno-aggressive-loop-optimizations -fno-isolate-erroneous-paths-dereference -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -g -Os -fstack-protector-strong -D__BTIF_AUTOPOWEROFF__ -DCAPSENSOR_TOUCH -DCAPSENSOR_FAC_CALCULATE -DCAPSENSOR_READ_DATA_POLLING -DCAPSENSOR_FP_MODE -DCAPSENSOR_AT_MCU -Wlogical-op -Wimplicit-fallthrough -Wno-trigraphs -fno-strict-aliasing -fno-tree-loop-distribute-patterns -std=gnu99 -Werror=implicit-int -Werror-implicit-function-declaration -DREVISION_INFO=59079a4-dirty:best1307 -DOTA_UPGRADE_CRC_LOG_SIZE= -DNV_REC_DEV_VER=2 -I../../platform/hal -DCHIP=best1307 -DKERNEL=RTX5 -DOTA_APP_BOOT_INFO_SECTION_SIZE=0 -DCOMBO_SECTION_SIZE=0 -DPROMPT_SECTION_SIZE=0x0 -DHOTWORD_SECTION_SIZE=0x0 -DCORE_DUMP_SECTION_SIZE=0 -DOTA_UPGRADE_SECTION_SIZE=0x1000 -DLOG_DUMP_SECTION_SIZE=0 -DCRASH_DUMP_SECTION_SIZE=0 -DCUSTOM_PARAMETER_SECTION_SIZE=0x1000 -DLHDC_LICENSE_SECTION_SIZE=0 -DUSERDATA_SECTION_SIZE=0x1000 -DAUD_SECTION_SIZE=0 -DANC_SECTION_SIZE=0 -DRESERVED_SECTION_SIZE=0x1000 -DFACTORY_SECTION_SIZE=0x1000 -DRAM_DUMP_SECTION_SIZE=0 -DBT_CONTROLLER_RAM_DUMP_SECTION_SIZE=0 -DFAST_XRAM_SECTION_SIZE=0x20 -DCUSTOMER_LOAD_ENC_DEC_RECORD_SECTION_SIZE=0x32000 -DOTA_CODE_OFFSET=0x20000 -MD -MP -MF ./.build_info.o.d -MT build_info.o -c -o build_info.o ../../utils/build_info/build_info.c
+  arm-none-eabi-gcc -o best1307.elf  -T _best1000.lds -static -mthumb -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard --specs=nano.specs -Wl,-X,--no-wchar-size-warning,--print-memory-usage,--build-id,-Map=best1307.map,--gc-sections,--whole-archive    platform/built-in.a  services/multimedia/built-in.a  utils/built-in.a  platform/main/built-in.a  platform/hal/built-in.a  utils/intersyshci/built-in.a  bthost/bthost_v1/built-in.a  utils/hsm/built-in.a  apps/built-in.a  services/built-in.a  rtos/built-in.a  utils/rom_utils/built-in.a  utils/encrypt/built-in.a  config/built-in.a  utils/boot_struct/built-in.a build_info.o -Wl,--no-whole-archive -Wl,--just-symbols=../../bthost/bthost_v1/rom/1307_simu/lib/bth_rom.elf -lstdc++ -lsupc++ -lm -lc -lgcc -lnosys -Wl,--just-symbols=../../bthost/bthost_v1/rom/1307_simu/lib/bth_rom.elf -lstdc++ -lsupc++ -lm -lc -lgcc -lnosys
+C:/QMK_MSYS/mingw64/bin/../lib/gcc/arm-none-eabi/13.3.0/../../../../arm-none-eabi/bin/ld.exe: C:/QMK_MSYS/mingw64/bin/../lib/gcc/arm-none-eabi/13.3.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libc_nano.a(libc_a-closer.o): in function `_close_r':
+C:/M/B/src/newlib-4.5.0.20241231/newlib/libc/reent/closer.c:47:(.text+0xc): warning: _close is not implemented and will always fail
+C:/QMK_MSYS/mingw64/bin/../lib/gcc/arm-none-eabi/13.3.0/../../../../arm-none-eabi/bin/ld.exe: C:/QMK_MSYS/mingw64/bin/../lib/gcc/arm-none-eabi/13.3.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libc_nano.a(libc_a-closer.o): note: the message above does not take linker garbage collection into account
+C:/QMK_MSYS/mingw64/bin/../lib/gcc/arm-none-eabi/13.3.0/../../../../arm-none-eabi/bin/ld.exe: C:/QMK_MSYS/mingw64/bin/../lib/gcc/arm-none-eabi/13.3.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libc_nano.a(libc_a-fstatr.o): in function `_fstat_r':
+C:/M/B/src/newlib-4.5.0.20241231/newlib/libc/reent/fstatr.c:55:(.text+0x12): warning: _fstat is not implemented and will always fail
+C:/QMK_MSYS/mingw64/bin/../lib/gcc/arm-none-eabi/13.3.0/../../../../arm-none-eabi/bin/ld.exe: C:/QMK_MSYS/mingw64/bin/../lib/gcc/arm-none-eabi/13.3.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libc_nano.a(libc_a-fstatr.o): note: the message above does not take linker garbage collection into account
+C:/QMK_MSYS/mingw64/bin/../lib/gcc/arm-none-eabi/13.3.0/../../../../arm-none-eabi/bin/ld.exe: C:/QMK_MSYS/mingw64/bin/../lib/gcc/arm-none-eabi/13.3.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libc_nano.a(libc_a-signalr.o): in function `_getpid_r':
+C:/M/B/src/newlib-4.5.0.20241231/newlib/libc/reent/signalr.c:83:(.text+0x2c): warning: _getpid is not implemented and will always fail
+C:/QMK_MSYS/mingw64/bin/../lib/gcc/arm-none-eabi/13.3.0/../../../../arm-none-eabi/bin/ld.exe: C:/QMK_MSYS/mingw64/bin/../lib/gcc/arm-none-eabi/13.3.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libc_nano.a(libc_a-signalr.o): note: the message above does not take linker garbage collection into account
+C:/QMK_MSYS/mingw64/bin/../lib/gcc/arm-none-eabi/13.3.0/../../../../arm-none-eabi/bin/ld.exe: C:/QMK_MSYS/mingw64/bin/../lib/gcc/arm-none-eabi/13.3.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libc_nano.a(libc_a-isattyr.o): in function `_isatty_r':
+C:/M/B/src/newlib-4.5.0.20241231/newlib/libc/reent/isattyr.c:52:(.text+0xc): warning: _isatty is not implemented and will always fail
+C:/QMK_MSYS/mingw64/bin/../lib/gcc/arm-none-eabi/13.3.0/../../../../arm-none-eabi/bin/ld.exe: C:/QMK_MSYS/mingw64/bin/../lib/gcc/arm-none-eabi/13.3.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libc_nano.a(libc_a-isattyr.o): note: the message above does not take linker garbage collection into account
+C:/QMK_MSYS/mingw64/bin/../lib/gcc/arm-none-eabi/13.3.0/../../../../arm-none-eabi/bin/ld.exe: C:/QMK_MSYS/mingw64/bin/../lib/gcc/arm-none-eabi/13.3.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libc_nano.a(libc_a-signalr.o): in function `_kill_r':
+C:/M/B/src/newlib-4.5.0.20241231/newlib/libc/reent/signalr.c:53:(.text+0x12): warning: _kill is not implemented and will always fail
+C:/QMK_MSYS/mingw64/bin/../lib/gcc/arm-none-eabi/13.3.0/../../../../arm-none-eabi/bin/ld.exe: C:/QMK_MSYS/mingw64/bin/../lib/gcc/arm-none-eabi/13.3.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libc_nano.a(libc_a-signalr.o): note: the message above does not take linker garbage collection into account
+C:/QMK_MSYS/mingw64/bin/../lib/gcc/arm-none-eabi/13.3.0/../../../../arm-none-eabi/bin/ld.exe: C:/QMK_MSYS/mingw64/bin/../lib/gcc/arm-none-eabi/13.3.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libc_nano.a(libc_a-lseekr.o): in function `_lseek_r':
+C:/M/B/src/newlib-4.5.0.20241231/newlib/libc/reent/lseekr.c:49:(.text+0x14): warning: _lseek is not implemented and will always fail
+C:/QMK_MSYS/mingw64/bin/../lib/gcc/arm-none-eabi/13.3.0/../../../../arm-none-eabi/bin/ld.exe: C:/QMK_MSYS/mingw64/bin/../lib/gcc/arm-none-eabi/13.3.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libc_nano.a(libc_a-lseekr.o): note: the message above does not take linker garbage collection into account
+C:/QMK_MSYS/mingw64/bin/../lib/gcc/arm-none-eabi/13.3.0/../../../../arm-none-eabi/bin/ld.exe: C:/QMK_MSYS/mingw64/bin/../lib/gcc/arm-none-eabi/13.3.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libc_nano.a(libc_a-openr.o): in function `_open_r':
+C:/M/B/src/newlib-4.5.0.20241231/newlib/libc/reent/openr.c:50:(.text+0x14): warning: _open is not implemented and will always fail
+C:/QMK_MSYS/mingw64/bin/../lib/gcc/arm-none-eabi/13.3.0/../../../../arm-none-eabi/bin/ld.exe: C:/QMK_MSYS/mingw64/bin/../lib/gcc/arm-none-eabi/13.3.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libc_nano.a(libc_a-openr.o): note: the message above does not take linker garbage collection into account
+Memory region         Used Size  Region Size  %age Used
+             ROM:           0 B        64 KB      0.00%
+           FLASH:      779716 B       896 KB     84.98%
+        FLASH_NC:        896 KB       896 KB    100.00%
+          FLASHX:      527848 B       896 KB     57.53%
+             RAM:      107528 B     262112 B     41.02%
+            RAMX:       16160 B     262112 B      6.17%
+           FRAMX:           4 B         32 B     12.50%
+  arm-none-eabi-objcopy -R .trc_str -O binary best1307.elf _best1307.bin_org
+  ../../tools/fill_sec_base.pl best1307.elf _best1307.bin_org best1307.bin
+*** Warning: Failed to get symbol address: __userdata_start
+*** Warning: Failed to get symbol address: __aud_start
+*** Warning: Failed to get symbol address: __anc_start
+*** Warning: Failed to get symbol address: __factory_start
+MAKE END: 2026-05-28 16:34:58.142805400
+MAKE TIME: 15.55 seconds
